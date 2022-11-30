@@ -69,6 +69,11 @@ export const EsqueciText  = styled.p`
     line-height: 19px;
 
     color: #E5E044;
+
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
 ` 
 
 export const CriarText =  styled.p`
@@ -79,4 +84,9 @@ export const CriarText =  styled.p`
     line-height: 19px;
 
     color: #23DD7A;
+
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
 `

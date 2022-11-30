@@ -4,7 +4,6 @@ import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { api } from '../../services/api';
-
 import { useForm } from "react-hook-form";
 
 
@@ -18,6 +17,10 @@ const Login = () => {
         reValidateMode: 'onChange',
         mode: 'onChange',
     });
+
+    const handleClickRegister = () => {
+        navigate('/register')
+    }
 
     const onSubmit = async (formData) => {
         try{
@@ -45,7 +48,7 @@ const Login = () => {
             </Column>
             <Column>
                 <Wrapper>
-                <TitleLogin>Faça seu cadastro</TitleLogin>
+                <TitleLogin>Já tem cadastro?</TitleLogin>
                 <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input placeholder="E-mail" leftIcon={<MdEmail />} name="email"  control={control} />
@@ -56,7 +59,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar Conta</CriarText>
+                    <CriarText onClick={handleClickRegister}>Criar Conta</CriarText>
                 </Row>
                 </Wrapper>
             </Column>

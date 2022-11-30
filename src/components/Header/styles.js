@@ -56,6 +56,10 @@ export const MenuRight = styled.a`
     color: #FFFFFF;
     margin-right: 12px;
     text-decoration: none;
+    &:hover{
+        cursor: pointer;
+        font-weight: 700;
+    }
 `
 
 export const UserPicture = styled.img`
